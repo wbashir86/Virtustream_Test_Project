@@ -1,0 +1,14 @@
+[switches:children]
+leaf
+
+[leaf]
+leaf-1 ansible_host=10.1.1.1
+leaf-2 ansible_host=10.1.1.2
+
+[cisco-nexus:vars]
+ansible_user=admin
+ansible_ssh_pass=cisco
+ansible_become_pass=cisco
+ansible_network_os=nxos
+ansible_connection=network_cli
+ansible_become_method=enable
