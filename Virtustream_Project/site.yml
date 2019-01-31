@@ -1,0 +1,15 @@
+---
+# This Playbook configures two vlans on the leaf switches
+# It creates a VLAN to VNI mapping using variables
+# It creates and SVI for the two VLANs and assigns an IP
+# Assigns a single VRF to both SVIs
+# Add more host_vars files to scale out
+
+- hosts: leaf
+  roles:
+    - role: leaf
+
+- hosts: all
+  tasks:
+    - name: save config
+      nxos_save_config: host={{ inventory_hostname }}

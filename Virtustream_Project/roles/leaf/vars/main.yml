@@ -1,0 +1,5 @@
+---
+    
+  named_leaf_vlans:
+  - { vlan_id: 11, name: test_vlan_100, addr: 10.0.100.1, mask: 24, mcast_grp: 239.0.0.100, vrf: DC }
+  - { vlan_id: 12, name: test_vlan_200, addr: 10.0.200.1, mask: 24, mcast_grp: 239.0.0.200, vrf: DC }
